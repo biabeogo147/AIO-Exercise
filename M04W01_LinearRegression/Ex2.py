@@ -72,8 +72,10 @@ def implement_linear_regression(X_data, y_data, epoch_max=50, lr=1e-5):
 
 
 if __name__ == '__main__':
-    y = predict(x1=1, x2=1, x3=1, w1=0, w2=0.5, w3=0, b=0.5)
-    print(y)
+    X, y = prepare_data('advertising.csv')
+
+    y_hat = predict(x1=1, x2=1, x3=1, w1=0, w2=0.5, w3=0, b=0.5)
+    print(y_hat)
 
     l = compute_loss_mse(y_hat=1, y=0.5)
     print(l)
@@ -90,18 +92,16 @@ if __name__ == '__main__':
     after_b = update_weight_b(b=0.5, dl_db=-1.0, lr=1e-5)
     print(after_b)
 
-    X, y = prepare_data('advertising.csv')
     (w1, w2, w3, b, losses) = implement_linear_regression(X, y)
     plt.plot(losses[:100])
-    plt.xlabel("# iteration ")
-    plt.ylabel(" Loss ")
+    plt.xlabel("#iteration")
+    plt.ylabel("Loss")
     plt.show()
     print(w1, w2, w3)
 
     tv = 19.2
     radio = 35.9
     newspaper = 51.3
-    X, y = prepare_data('advertising.csv')
     (w1, w2, w3, b, losses) = implement_linear_regression(X, y, epoch_max=50, lr=1e-5)
     sales = predict(tv, radio, newspaper, w1, w2, w3, b)
     print(f'predicted sales is {sales}')
