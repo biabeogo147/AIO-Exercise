@@ -1,2 +1,6 @@
-./M04W06_SoftmaxRegression/creditcard.csv
-./M04W06_SoftmaxRegression/Twitter_Data.csv
+/M05W02_SoftmaxRegression/creditcard.csv
+/M05W02_SoftmaxRegression/Twitter_Data.csv
+/M05W03_MLPs/Auto_MPG_data.csv
+/M05W03_MLPs/FER-2013.zip
+/M05W03_MLPs/NonLinear_data.npy
+/M05W03_MLPs/data/
